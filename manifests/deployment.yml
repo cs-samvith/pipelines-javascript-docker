@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cssamvithpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cssamvithpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: cssamvithpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cssamvithpipelinesjavascriptdocker 
+          image: samdeploymentacr.azurecr.io/cssamvithpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
